@@ -1,0 +1,15 @@
+server:
+  port: 7001
+spring:
+  application:
+    name: cloud-p-svr
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource
+    username: develop
+    password: jkd123
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/test?serverTimezone=Hongkong&useUnicode=true&characterEncoding=utf8&useSSL=false
+
+mybatis:
+  mapper-locations: classpath:mybatis/mapper/*.xml
+  type-aliases-package: com.zzz.cloud.entity
