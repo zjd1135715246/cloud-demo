@@ -63,7 +63,7 @@ package-lock.json
 
 #maven
 deploy.bat
-/target/
+*/target/
 
 #some other files
 *.bak
