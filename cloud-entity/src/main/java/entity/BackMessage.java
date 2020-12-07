@@ -1,13 +1,11 @@
-package com.zzz.cloud.entity;
+package entity;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
-import lombok.NoArgsConstructor;
 
 /**
- * @Description TODO
- * @Date 2020/12/6 16:57
- * @Created by zjd
+ * @date  2020/12/6 16:50
+ * @author  by zjd
  */
 @Data
 @AllArgsConstructor

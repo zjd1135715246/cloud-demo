@@ -1,9 +1,11 @@
 package com.zzz.cloud.service;
 
+import entity.BackMessage;
+
 /**
- * @Description TODO
- * @Date 2020/12/6 17:03
- * @Created by zjd
+ * @date  2020/12/6 16:50
+ * @author  by zjd
  */
 public interface PaymentService {
+    BackMessage getPayment(Integer id);
 }

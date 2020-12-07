@@ -4,12 +4,13 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 /**
- * @date  2020/12/6 16:50
- * @author  by zjd
+ * @author zjd
+ * @date 2020/12/7
  */
 @SpringBootApplication
-public class P7001Main {
+public class Order70Main {
+
     public static void main(String[] args) {
-        SpringApplication.run(P7001Main.class);
+        SpringApplication.run(Order70Main.class);
     }
 }

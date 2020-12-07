@@ -1,15 +1,16 @@
 package com.zzz.cloud.dao;
 
-import com.zzz.cloud.entity.Payment;
+import entity.Payment;
 import org.apache.ibatis.annotations.Mapper;
 
 /**
- * @Description TODO
- * @Date 2020/12/6 16:58
- * @Created by zjd
+ * @date  2020/12/6 16:50
+ * @author  by zjd
  */
 @Mapper
 public interface PaymentDao {
 
-    public  int insertOne(Payment payment);
+    int insertOne(Payment payment);
+
+    Payment getOne(Integer id);
 }
