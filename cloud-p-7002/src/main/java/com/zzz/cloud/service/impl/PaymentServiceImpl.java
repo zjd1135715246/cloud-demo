@@ -17,14 +17,13 @@ public class PaymentServiceImpl implements PaymentService {
 
     @Autowired
     private PaymentDao paymentDao;
-
     @Value("${server.port}")
     private Integer serverPort;
 
     @Override
     public BackMessage getPayment(Integer id) {
         Payment one = paymentDao.getOne(id);
-        BackMessage message = new BackMessage("yes,serverPort:"+serverPort,one);
+        BackMessage message = new BackMessage("yes，serverPort："+serverPort,one);
         return message;
     }
 }

@@ -1,22 +1,20 @@
-package utils;
+package com.zzz.cloud.config;
 
-import com.alibaba.fastjson.JSON;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cloud.client.loadbalancer.LoadBalanced;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.client.RestTemplate;
 
 /**
- * @author zjd
- * @date 2020/12/7
+ * @Date 2020/12/8 21:09
+ * @Created by zjd
  */
-
-public class RestUtils {
-
-    public   RestTemplate restTemplate(){
+@Configuration
+public class RestTemplateConfig {
+    @LoadBalanced
+    @Bean
+    public RestTemplate restTemplate(){
         return new RestTemplate();
     };
-
 
 }

@@ -10,8 +10,8 @@ import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
  */
 @SpringBootApplication
 @EnableEurekaClient
-public class P7001Main {
+public class P7002Main {
     public static void main(String[] args) {
-        SpringApplication.run(P7001Main.class);
+        SpringApplication.run(P7002Main.class);
     }
 }

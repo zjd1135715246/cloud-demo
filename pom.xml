@@ -12,7 +12,9 @@
         <module>cloud-p-7001</module>
         <module>cloud-order-7000</module>
         <module>cloud-entity</module>
-        <module>eureka-server</module>
+        <module>eureka-server-6001</module>
+        <module>eureka-server-6002</module>
+        <module>cloud-p-7002</module>
     </modules>
     <packaging>pom</packaging>
 
