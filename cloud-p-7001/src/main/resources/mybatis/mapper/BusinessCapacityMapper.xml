@@ -5,4 +5,11 @@
     <select id="getOne" resultType="entity.Payment">
         select id,name from payment where id =#{id}
     </select>
+    
+    <insert id="insertList" useGeneratedKeys="true" keyProperty="id">
+        insert into payment(name) values
+        <foreach collection="list" separator="," item="i">
+            (#{i.name})
+        </foreach>
+    </insert>
 </mapper>

@@ -5,10 +5,10 @@ spring:
     name: cloud-p-svr
   datasource:
     type: com.alibaba.druid.pool.DruidDataSource
-    username: zjd
-    password: zjd123
+    username: root
+    password: 123456
     driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://81.70.199.67:3306/test?serverTimezone=Hongkong&useUnicode=true&characterEncoding=utf8&useSSL=false
+    url: jdbc:mysql://127.0.0.1:3306/test?serverTimezone=Hongkong&useUnicode=true&characterEncoding=utf8&useSSL=false
 eureka:
   client:
     register-with-eureka: true
@@ -19,6 +19,10 @@ eureka:
   instance:
     instance-id: p7001
     prefer-ip-address: true
+    #eureka客户端向服务端发送心跳的时间间隔，单位 秒，默认30秒
+    lease-renewal-interval-in-seconds: 1
+    #eureka服务端最后一次收到心跳的最大时间间隔，单位 秒，默认90秒，超时将剔除服务
+    lease-expiration-duration-in-seconds: 2
 mybatis:
   mapper-locations: classpath:mybatis/mapper/*.xml
   type-aliases-package: com.zzz.cloud.entity

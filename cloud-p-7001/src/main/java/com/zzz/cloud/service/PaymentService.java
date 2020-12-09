@@ -8,4 +8,6 @@ import entity.BackMessage;
  */
 public interface PaymentService {
     BackMessage getPayment(Integer id);
+
+    void test();
 }

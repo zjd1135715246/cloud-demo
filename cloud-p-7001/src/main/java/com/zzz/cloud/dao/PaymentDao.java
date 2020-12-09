@@ -3,6 +3,8 @@ package com.zzz.cloud.dao;
 import entity.Payment;
 import org.apache.ibatis.annotations.Mapper;
 
+import java.util.List;
+
 /**
  * @date  2020/12/6 16:50
  * @author  by zjd
@@ -13,4 +15,6 @@ public interface PaymentDao {
     int insertOne(Payment payment);
 
     Payment getOne(Integer id);
+
+    void insertList(List<Payment> payments);
 }
