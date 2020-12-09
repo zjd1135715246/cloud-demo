@@ -3,6 +3,16 @@ server:
 spring:
   application:
     name: cloud-p-svr
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource
+    username: zjd
+    password: zjd123
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://81.70.199.67:3306/test?serverTimezone=Hongkong&useUnicode=true&characterEncoding=utf8&useSSL=false
   cloud:
     zookeeper:
       connect-string: 81.70.199.67:2181
+
+mybatis:
+  mapper-locations: classpath:mybatis/mapper/*.xml
+  type-aliases-package: com.zzz.cloud.entity

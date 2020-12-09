@@ -1,0 +1,8 @@
+server:
+  port: 7000
+spring:
+  application:
+    name: cloud-order-svr
+  cloud:
+    zookeeper:
+      connect-string: 81.70.199.67:2181
