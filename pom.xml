@@ -19,6 +19,7 @@
         <module>cloud-order-zk-7000</module>
         <module>cloud-consumer-feign-order-7000</module>
         <module>cloud-p-hystrix-7001</module>
+        <module>cloud-consumer-feign-hystrix-order-7000</module>
     </modules>
     <packaging>pom</packaging>
 

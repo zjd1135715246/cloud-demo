@@ -1,0 +1,11 @@
+server:
+  port: 7000
+
+eureka:
+  client:
+    register-with-eureka: false
+    service-url:
+      defaultZone: http://eureka6001.com:6001/eureka/,http://eureka6002.com:6002/eureka/
+feign:
+  httpclient:
+    enabled: true

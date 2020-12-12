@@ -10,4 +10,6 @@ public interface PaymentService {
     BackMessage getOne(Integer id);
 
     BackMessage getOneSleep(Integer id);
+
+    String paymentCircuitBreaker(Integer id);
 }

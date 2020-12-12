@@ -4,6 +4,7 @@ import com.zzz.cloud.service.PaymentService;
 import entity.BackMessage;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -29,4 +30,12 @@ public class PaymentController {
         BackMessage message = paymentService.getOneSleep(id);
         return message;
     }
+
+    //====服务熔断
+    @GetMapping("/payment/circuit/{id}")
+    public String paymentCircuitBreaker(@PathVariable("id") Integer id) {
+        String result = paymentService.paymentCircuitBreaker(id);
+        return result;
+    }
+
 }
