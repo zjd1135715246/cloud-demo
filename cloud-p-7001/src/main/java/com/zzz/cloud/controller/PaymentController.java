@@ -2,7 +2,6 @@ package com.zzz.cloud.controller;
 
 import com.zzz.cloud.service.PaymentService;
 import entity.BackMessage;
-import org.checkerframework.checker.units.qual.A;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.cloud.client.ServiceInstance;

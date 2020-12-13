@@ -7,7 +7,8 @@ eureka:
     register-with-eureka: false
     fetchRegistry: false
     service-url:
-      defaultZone: http://eureka6002.com:6002/eureka/
+      #defaultZone: http://eureka6002.com:6002/eureka/
+      defaultZone: http://eureka6001.com:6001/eureka/
   server:
     enable-self-preservation: false   #自我保护机制
     eviction-interval-timer-in-ms: 2000   #测试心跳时间
