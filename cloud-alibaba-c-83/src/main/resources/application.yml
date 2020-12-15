@@ -1,0 +1,15 @@
+server:
+  port: 83
+
+spring:
+  application:
+    name: nacos-consumer
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 81.70.199.67:8848 #配置Nacos地址
+
+service-url:
+  nacos-user-service:  http://nacos-payment-provider
+
+
