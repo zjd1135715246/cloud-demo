@@ -32,7 +32,8 @@ public class PaymentController {
 
     @GetMapping("/payment/{id}")
     public BackMessage getPayment(@PathVariable Integer id){
-        BackMessage message = paymentService.getPayment(id);
+        //BackMessage message = paymentService.getPayment(id);
+        BackMessage message = new BackMessage();
         return message;
     }
 

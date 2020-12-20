@@ -1,27 +1,30 @@
 package com.zzz.cloud.controller;
 
-import com.zzz.cloud.service.PaymentFeignService;
 import entity.BackMessage;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.client.RestTemplate;
 
 /**
- * @Date 2020/12/9 21:13
- * @Created by zjd
+ * @author zjd
+ * @Date 2020/12/20 11:30
  */
 @RestController
 @RequestMapping("/order")
 public class OrderController {
 
-    @Autowired
-    private PaymentFeignService paymentFeignService;
+    private String URL = "http://nacos-payment-provider";
 
-    @GetMapping("/pay/get/{id}")
-    public BackMessage get(@PathVariable("id") Integer id){
-        BackMessage m = paymentFeignService.getPaymentById(id);
-        return m;
+    @Autowired
+    private RestTemplate restTemplate;
+
+
+    @GetMapping("/get/{id}")
+    public String get(@PathVariable("id") Integer id){
+        Object object = restTemplate.getForObject(URL+"/pay/"+id, BackMessage.class);
+        return object.toString();
     }
 }
