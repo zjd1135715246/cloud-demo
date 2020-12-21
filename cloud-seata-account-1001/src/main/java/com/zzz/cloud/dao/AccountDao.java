@@ -1,5 +1,6 @@
 package com.zzz.cloud.dao;
 
+import com.zzz.cloud.entity.Account;
 import org.apache.ibatis.annotations.Mapper;
 
 /**
@@ -8,5 +9,5 @@ import org.apache.ibatis.annotations.Mapper;
  */
 @Mapper
 public interface AccountDao {
-    void updateAccount(Long userId, Long money);
+    void updateAccount(Account account);
 }

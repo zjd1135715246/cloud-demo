@@ -4,6 +4,6 @@
 
 
     <update id="updateAccount">
-        update account set amount=amount - #{param2} where id = #{param1}
+        update account set amount=amount - #{amount} where id = #{id}
     </update>
 </mapper>

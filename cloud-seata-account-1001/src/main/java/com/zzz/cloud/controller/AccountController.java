@@ -1,8 +1,11 @@
 package com.zzz.cloud.controller;
 
+import com.zzz.cloud.entity.Account;
 import com.zzz.cloud.service.AccountService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
 /**
@@ -15,8 +18,9 @@ public class AccountController {
     @Autowired
     private AccountService accountService;
 
-    @GetMapping("/pay")
-    public void pay(Long userId,Long money){
-        accountService.pay(userId,money);
+    @PostMapping("/pay")
+    public void pay(@RequestBody Account account){
+        accountService.pay(account);
+        System.out.println(account);
     }
 }

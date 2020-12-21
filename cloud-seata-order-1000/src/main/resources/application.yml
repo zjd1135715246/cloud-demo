@@ -13,7 +13,7 @@ spring:
       discovery:
         server-addr: 81.70.199.67:8848
   datasource:
-    driver-class-name: com.mysql.jdbc.Driver
+    driver-class-name: com.mysql.cj.jdbc.Driver
     url: jdbc:mysql://81.70.199.67:3306/test
     username: zjd
     password: 123456

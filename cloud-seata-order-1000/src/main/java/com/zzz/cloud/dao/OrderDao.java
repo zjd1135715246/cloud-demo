@@ -1,6 +1,6 @@
 package com.zzz.cloud.dao;
 
-import com.zzz.cloud.entity.Order;
+import com.zzz.cloud.entity.Orders;
 import org.apache.ibatis.annotations.Mapper;
 
 /**
@@ -10,7 +10,7 @@ import org.apache.ibatis.annotations.Mapper;
 @Mapper
 public interface OrderDao {
 
-    void insertOrder(Order order);
+    void insertOrder(Orders order);
 
     void updateOrder(Long id);
 }

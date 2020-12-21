@@ -18,10 +18,7 @@ public class StockServiceImpl implements StockService {
     private StockDao stockDao;
 
     @Override
-    public void deductionStock(Long stockId, Long num) {
-        Stock stock = new Stock();
-        stock.setId(stockId);
-        stock.setNum(num);
+    public void deductionStock(Stock stock) {
         stockDao.updateStock(stock);
     }
 }

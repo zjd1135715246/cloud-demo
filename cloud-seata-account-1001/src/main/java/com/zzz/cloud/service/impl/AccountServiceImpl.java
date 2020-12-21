@@ -1,6 +1,7 @@
 package com.zzz.cloud.service.impl;
 
 import com.zzz.cloud.dao.AccountDao;
+import com.zzz.cloud.entity.Account;
 import com.zzz.cloud.service.AccountService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -17,7 +18,8 @@ public class AccountServiceImpl implements AccountService {
 
 
     @Override
-    public void pay(Long userId, Long money) {
-        accountDao.updateAccount(userId,money);
+    public void pay(Account account) {
+        System.out.println(10/0);
+        accountDao.updateAccount(account);
     }
 }

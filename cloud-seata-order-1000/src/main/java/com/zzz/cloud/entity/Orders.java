@@ -10,14 +10,15 @@ import java.util.Date;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class Order {
+public class Orders {
 
   private Long id;
   private String orderNo;
   private Long amount;
-  private Long status;
+  private Integer status;
   private Long stockId;
   private Long userId;
+  private Long goodsNum;
   private Date buildTime;
 
 
