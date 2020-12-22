@@ -5,27 +5,43 @@ spring:
   application:
     name: seata-account-service
   cloud:
-    alibaba:
-      seata:
-
-        tx-service-group: fsp_tx_group
+#    alibaba:
+#      seata:
+#        tx-service-group: fsp_tx_group
     nacos:
       discovery:
         server-addr: 81.70.199.67:8848
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://81.70.199.67:3306/test
-    username: zjd
+    url: jdbc:mysql://127.0.0.1:3306/test?serverTimezone=Hongkong
+    username: root
     password: 123456
+
+seata:
+  enabled: true
+  application-id: ${spring.application.name}
+  tx-service-group: fsp_tx_group
+  enable-auto-data-source-proxy: true
+  config:
+    type: nacos
+    nacos:
+      namespace:
+      serverAddr: 81.70.199.67:8848
+      group: SEATA_GROUP
+      userName: "nacos"
+      password: "nacos"
+  registry:
+    type: nacos
+    nacos:
+      application: seata-server
+      server-addr: 81.70.199.67:8848
+      namespace:
+      userName: "nacos"
+      password: "nacos"
 
 feign:
   hystrix:
     enabled: false
-
-logging:
-  level:
-    io:
-      seata: info
 
 mybatis:
   config-location: classpath:mybatis/mybatis-config.xml
