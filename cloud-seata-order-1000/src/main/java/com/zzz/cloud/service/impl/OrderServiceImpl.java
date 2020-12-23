@@ -30,7 +30,7 @@ public class OrderServiceImpl implements OrderService {
     private AccountService accountService;
 
     @Override
-    @GlobalTransactional(name = "fsp-create-order",rollbackFor = Exception.class)
+    @GlobalTransactional(name = "SEATA_GROUP",rollbackFor = Exception.class)
     public void createOrder(Orders order) {
         System.out.println(order);
         order.setStatus(0);
